@@ -56,9 +56,15 @@ Alternatively we can use Dockerfiles. This is something we'll hash out overtime 
 
 ## Running the front end
 
+tdbs
+
 ## Connecting a wallet
 
+tdb
+
 ## Building and Deploying the smart contract
+
+tbd
 
 ## Creating Subgraph via TheGraph Hosted Service
 
