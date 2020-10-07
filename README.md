@@ -58,7 +58,7 @@ I chose to use Ubuntu 20.04 LTS (see: https://app.vagrantup.com/ubuntu/boxes/foc
     config.vm.box = "ubuntu/focal64" # Ubuntu 20.04 LTS
 ```
 
-See [Vagrant's Getting Started] for more details about setting up.
+See [Vagrant's Getting Started](https://learn.hashicorp.com/tutorials/vagrant/getting-started-index) for more details about setting up.
 
 ```shell
 cd ethonline_hackathon
