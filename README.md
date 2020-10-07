@@ -52,7 +52,32 @@ We use vagrant to share the developer environment across machines. This allows d
 
 Alternatively we can use Dockerfiles. This is something we'll hash out overtime and can be adjusted per project.
 
-`tbd...`
+I chose to use Ubuntu 20.04 LTS (see: https://app.vagrantup.com/ubuntu/boxes/focal64)
+
+```shell
+    config.vm.box = "ubuntu/focal64" # Ubuntu 20.04 LTS
+```
+
+See [Vagrant's Getting Started] for more details about setting up.
+
+```shell
+cd ethonline_hackathon
+vagrant -v
+# -> Vagrant 2.2.10
+
+vagrant up  # this will take a little while the 1st time you run it
+
+vagrant global-status
+
+vagrant ssh # ssh login into virtual machine
+
+vagrant down # shutdown vagrant
+
+vagrant destroy # delete image; will cause the need to re-provision from scratch next time you do `vagrant up`
+```
+
+
+See
 
 ## Running the front end
 
