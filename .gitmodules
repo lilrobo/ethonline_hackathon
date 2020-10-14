@@ -1,0 +1,3 @@
+[submodule "audius-client"]
+	path = audius-client
+	url = https://github.com/lilrobo/audius-client.git
