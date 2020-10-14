@@ -36,8 +36,6 @@ Once produced it would be interesting to build out a rich ecosystem of revenue s
 * Python3
 
 
-
-
 # Getting Started:
 
 ```shell
@@ -86,6 +84,10 @@ tdbs
 ## Connecting a wallet
 
 tdb
+
+## Integrating Biconomy
+
+https://biconomy.io/
 
 ## Building and Deploying the smart contract
 

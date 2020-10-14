@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "ubuntu/focal64" # Ubuntu 20.04 LTS
+  config.vm.box = "ubuntu/focal64"    # Ubuntu 20.04 LTS
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -51,5 +51,30 @@ Vagrant.configure("2") do |config|
   # SHELL
 
   config.vm.provision :shell, path: "bootstrap_vagrant.sh"
+
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    # Install NVM
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+    source ~/.nvm/nvm.sh
+    echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
+
+    # Install Node
+    echo "Installing Node.js (please be patient)"
+    nvm install stable &> /dev/null
+    nvm alias default stable
+
+    # install global node packages
+    echo "Installing global node.js packages... (please be patient)"
+    # change 'gulp' to 'grunt' depending on project setup
+    npm install -g gulp bower npm-check-updates
+
+    # install project dependencies and build
+    cd /vagrant/
+    #echo "Installing local node.js packages... (please be patient)"
+    #npm install
+    #bower install
+    # see package.json for respective build task
+    #npm run build-dev
+SHELL
 
 end
